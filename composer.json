@@ -1,0 +1,36 @@
+{
+    "name": "konalexiou/omnipay-paycenter",
+    "type": "library",
+    "description": "Piraeus Bank Paycenter driver for the Omnipay payment processing library",
+    "keywords": [
+        "paycenter",
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment"
+    ],
+    "homepage": "https://github.com/konalexiou/omnipay-paycenter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Konstantinos Alexiou",
+            "email": "konalexiou@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\Paycenter\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~2.0",
+        "phpro/soap-client": "^0.5.3"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
