@@ -25,7 +25,8 @@ class TicketRequest extends AbstractSoapRequest
           'CurrencyCode' => $this->getCurrencyCode(),
           'Installments' => $this->getInstallments(),
           'Bnpl' => $this->getBnpl(),
-          'Parameters' => $this->getParameters()
+          'Parameters' => $this->getParameters(),
+          'testMode' => $this->getTestMode(),
         );
     }
 

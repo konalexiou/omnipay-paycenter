@@ -7,7 +7,6 @@ namespace Omnipay\Paycenter\Message;
 
 use Omnipay\Common\Message\RedirectResponseInterface;
 use Omnipay\Common\Message\RequestInterface;
-
 // use Omnipay\Common\Exception\RuntimeException;
 // use Symfony\Component\HttpFoundation\RedirectResponse as HttpRedirectResponse;
 // use Symfony\Component\HttpFoundation\Response as HttpResponse;
@@ -135,7 +134,7 @@ class RedirectResponse implements RedirectResponseInterface
 
 
     public function getTransactionReference(){
-      return $this->data['MerchantReference'];
+      return $this->data['TranTicket'];
     }
 
 
