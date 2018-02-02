@@ -16,6 +16,10 @@ class SoapResponse extends AbstractResponse
         // Convert the SOAP Response (stdClass containing a stdClass) to an array.
         $responseName = $request->responseName;
         $this->data   = json_decode(json_encode($data->$responseName), true);
+
+        // print_r( $this->data );
+        // echo $this->getTransactionReference();
+        // exit;
     }
 
     public function isSuccessful()

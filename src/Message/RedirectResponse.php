@@ -15,7 +15,7 @@ class RedirectResponse implements RedirectResponseInterface
 {
     /** @var string  */
     // protected $baseEndpoint;
-    protected $testEndpoint = 'http://localhost/testpay/paycenter-pay.php';
+    protected $testEndpoint = 'https://paycenter.piraeusbank.gr/redirection/pay.aspx';
     protected $liveEndpoint = 'https://paycenter.piraeusbank.gr/redirection/pay.aspx';
 
     public function __construct(
@@ -83,7 +83,7 @@ class RedirectResponse implements RedirectResponseInterface
     <title>Redirecting...</title>
 </head>
 <body onload="document.forms[0].submit();">
-    <form action="%1$s" method="post">
+    <form action="%1$s" method="post" onload="document.forms[0].submit();">
         <p>Redirecting to payment page...</p>
         <p>
             %2$s

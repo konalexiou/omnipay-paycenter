@@ -98,11 +98,15 @@ class RedirectGateway extends AbstractGateway
         $parameters['RequestType'] = '02';
         $parameters['ExpirePreauth'] = 0;
         $parameters['Bnpl'] = 0;
-        $ticket = $this->ticket($parameters);
+        $ticket_req = $this->ticket($parameters);
+        $ticket = $ticket_req->send();
+
+
         $parameters['transactionReference'] = $ticket->getTransactionReference();
-        if( $parameters['testMode']==true ){
-          $parameters['transactionReference'] = $parameters['MerchantReference'];
-        }
+        // if( $parameters['testMode']==true ){
+        //   $parameters['transactionReference'] = $parameters['MerchantReference'];
+        // }
+
         return $this->createRequest('\Omnipay\Paycenter\Message\RedirectRequest', $parameters);
     }
 
