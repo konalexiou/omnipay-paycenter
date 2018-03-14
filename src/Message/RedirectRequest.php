@@ -24,6 +24,7 @@ class RedirectRequest extends AbstractRequest
         'CurrencyCode' => $this->getCurrencyCode(),
         'Installments' => $this->getInstallments(),
         'Bnpl' => $this->getBnpl(),
+        'LanguageCode' => $this->getLanguageCode(),
         'Parameters' => $this->getParameters(),
         'TranTicket' => $this->getTransactionReference(),
         'testMode' => $this->getTestMode(),
@@ -342,6 +343,32 @@ class RedirectRequest extends AbstractRequest
     public function setBnpl($value)
     {
         return $this->setParameter('Bnpl', $value);
+    }
+
+    /**
+     * Get LanguageCode
+     *
+     * Use the LanguageCode assigned by Paycenter.
+     *
+     * @return string
+     */
+    public function getLanguageCode()
+    {
+        return $this->getParameter('LanguageCode');
+    }
+
+
+    /**
+     * Set LanguageCode
+     *
+     * Use the LanguageCode assigned by Paycenter.
+     *
+     * @param string $value
+     * @return SoapAbstractRequest implements a fluent interface
+     */
+    public function setLanguageCode($value)
+    {
+        return $this->setParameter('LanguageCode', $value);
     }
 
     /**
